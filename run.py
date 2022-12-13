@@ -218,7 +218,10 @@ def insertevents():
   stmt=ibm_db.prepare(cloud_db_conn,sql)
   rows_inserted=ibm_db.execute_many(stmt,tuple_of_tuples)
   ibm_db.close(cloud_db_conn)
-  return jsonify({"NoOfRowsAdded:",rows_inserted})
+  response={}
+  response['NoOfRowsAdded']=rows_inserted
+  print(response)
+  return json.dumps(response)
   
 
 @app.route('/')
