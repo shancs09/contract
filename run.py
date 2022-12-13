@@ -203,11 +203,15 @@ def insertevents():
   request_data= request_data['calendarEvents']
   final_wd_df=pd.DataFrame(request_data)
   
-  col_list=final_wd_df.columns.tolist()
-  col_list=[x.upper() for x in col_list]  
-  cols = ",".join([str(i) for i in col_list])
+#   col_list=final_wd_df.columns.tolist()
+#   col_list=[x.upper() for x in col_list]  
+#   cols = ",".join([str(i) for i in col_list])
+  final_wd_df.rename(columns = {'eventId':'EVENT_ID','eventName':'EVENT_NAME','eventScope':'EVENT_SCOPE','creationDate':'CREATION_DATE','effectiveDate':'EFFECTIVE_DATE','caseId':'CASE_ID'}, inplace = True)
+  # col_list=final_wd_df.columns.tolist()
+  # col_list=[x.upper() for x in col_list] 
+  cols = ",".join([str(i) for i in final_wd_df.columns.tolist()])
   tuple_of_tuples = tuple([tuple(x) for x in final_wd_df.values])
-  
+  print(cols) 
   #DBConnect
   cloud_db_conn = ibm_db.connect(CloudDB_dsn,'','')
   sql="INSERT INTO JHW60694.CM_EVENT_CALENDER (" + cols + ") VALUES (?,?,?,?,?,?)"
