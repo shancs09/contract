@@ -1,0 +1,9 @@
+Flask==2.2.2
+ibm-watson==6.1.0
+pandas==1.4.3
+json5==0.9.10
+ibm-cloud-sdk-core==3.16.0
+requests==2.28.1
+bios==0.1.2
+PyPDF2==2.11.1
+ibm-db==3.1.4v

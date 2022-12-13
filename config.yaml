@@ -1,0 +1,4 @@
+  wksmodel:
+    wks_wnl_apikey: "Hlx2E6jLOkV_UVKyntcUFsPh8r1JQM7nrJPspFMDs0cz"
+    wks_wnl_url: "https://api.us-south.natural-language-understanding.watson.cloud.ibm.com/instances/792adae4-8d60-43f9-875d-6dad8070b259"
+    wks_model_id: '2d90d5a3-a19b-417a-ae8f-cd476aafc0ba'

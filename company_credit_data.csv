@@ -1,0 +1,14 @@
+﻿Company,CheckingStatus,LoanDuration,CreditHistory,LoanAmount,ExistingSavings,ContractDuration,OwnsProperty,AgeOfCompany,ExistingCreditsCount,Risk,default,blacklisted
+Agon Sports,0_to_200,31,credits_paid_to_date,1889,100_to_500,less_1,savings_insurance,32,1,ModerateRisk,No,No
+Coffee Time Services,greater_200,4,all_credits_paid_back,4206,less_100,unemployed,savings_insurance,27,1,HighRisk,Yes,No
+Sports Equipment,greater_200,23,credits_paid_to_date,2963,greater_1000,greater_7,car_other,46,2,HighRisk,No,No
+Bike Rentals Service,0_to_200,28,credits_paid_to_date,3693,less_100,greater_7,savings_insurance,32,1,ModerateRisk,Yes,Yes
+E-BIKES AGREEMENT,less_0,16,credits_paid_to_date,3109,less_100,4_to_7,car_other,36,2,LowRisk,No,No
+Everton Technologies,greater_200,14,prior_payments_delayed,1683,100_to_500,1_to_4,savings_insurance,35,1,HighRisk,No,No
+KEMP HELY Ltd,less_0,5,all_credits_paid_back,1523,less_100,unemployed,real_estate,19,1,LowRisk,No,No
+SALARY CAR LEASE Pvt Ltd,less_0,9,all_credits_paid_back,4302,less_100,1_to_4,car_other,34,1,LowRisk,No,No
+Bike Rentals Service,0_to_200,29,credits_paid_to_date,3705,less_100,less_1,car_other,44,1,ModerateRisk,Yes,Yes
+ONTRACK BIKES ,greater_200,4,all_credits_paid_back,2407,less_100,1_to_4,car_other,52,1,HighRisk,No,No
+Wigan Athletic,0_to_200,4,all_credits_paid_back,250,less_100,1_to_4,real_estate,26,1,ModerateRisk,No,No
+EV Vehicles Service,0_to_200,4,all_credits_paid_back,250,less_100,1_to_4,real_estate,28,1,ModerateRisk,No,No
+YEPPO EV,less_0,13,all_credits_paid_back,2317,less_100,less_1,savings_insurance,27,2,LowRisk,No,No
