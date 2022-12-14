@@ -187,8 +187,17 @@ def getevents():
   query = 'SELECT * FROM "JHW60694"."CM_EVENT_CALENDER"'
 
   final_wd_df = pd.read_sql_query(query, con=CloudDB_connection)
-  final_wd_df.rename(columns = {'EVENT_ID':'eventId','EVENT_NAME':'eventName','EVENT_SCOPE':'eventScope','CREATION_DATE':'creationDate','EFFECTIVE_DATE':'effectiveDate','CASE_ID':'caseId'}, inplace = True)
+  final_wd_df.rename(columns = {'EVENT_ID':'eventId','EVENT_NAME':'eventName','EVENT_SCOPE':'eventScope','CREATION_DATE':'creationDate','EFFECTIVE_DATE':'effectiveDate','CASE_ID':'caseId','TRANSACTION_DATE':'transactionDate'}, inplace = True)
 
+  final_wd_df['creationDate'] = pd.to_datetime(final_wd_df['creationDate'], errors='coerce')
+  final_wd_df['creationDate'] = final_wd_df['creationDate'].dt.strftime('%Y-%m-%d')
+
+  final_wd_df['effectiveDate'] = pd.to_datetime(final_wd_df['effectiveDate'], errors='coerce')
+  final_wd_df['effectiveDate'] = final_wd_df['effectiveDate'].dt.strftime('%Y-%m-%d')
+
+  final_wd_df['transactionDate'] = pd.to_datetime(final_wd_df['transactionDate'], errors='coerce')
+  final_wd_df['transactionDate'] = final_wd_df['transactionDate'].dt.strftime('%Y-%m-%d %X')
+  
   final_data= final_wd_df.to_json(orient="records")
   final_data=json.loads(final_data)
   final_data= {"calendarEvents":final_data}
